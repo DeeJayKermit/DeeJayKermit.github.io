@@ -1,15 +1,113 @@
-
-
 body{
-	background-color: rgb(60, 60, 60); 
+	margin: 0px 0px;
+	padding: 0px 40px;
+	background-color: rgb(20, 20, 20);
+	color: white;
 }
+
 .header{
-	padding: 10px 0px;
-	border-bottom: 1px;
-	position:fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 99;
-	background-color: #def3ff;
-} 
+padding: 10px 40px;
+border-bottom: 1px;
+position:fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 99;
+background-color: #80E3FF;
+}
+
+.header_space{
+height: 38.4px;
+}
+//header底下的空間(不覆蓋到)
+
+ul{
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+
+/*不知道為什麼不能通用到所有ul覆蓋不過去*/
+ul.category_menu {
+list-style: none;
+padding-inline-start: 0px;
+margin:0;
+//border: rgb(40, 40, 40) 1px solid;
+display: inline-block;
+font-family: 'Open Sans', Arial, sans-self;
+font-size: 12px;
+}
+
+ul.category_menu li{
+list-style: none;
+position: relative
+white-space: nowrap;
+//border-right: rgb(40, 40, 40) 1px solid;
+}
+
+ul.category_menu > li:last-child {
+//border-right: none;
+}
+
+ul.category_menu > li:first-child {
+//border-right: none;
+padding-left: 0;
+margin: 0;
+}
+
+ul.category_menu > li {
+float: left; /* 只有第一層是靠左對齊*/
+}
+
+ul.category_menu a {
+background-color: #000;
+color: white;
+display: block;
+padding: 0 40px 0 40px;
+text-decoration: none;
+line-height: 50px;
+}
+ul.category_menu a:hover { /* 滑鼠滑入按鈕變色*/
+background-color: #80E3FF;
+color: #000;
+}
+ul.category_menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+background-color: #80E3FF;
+color: #666;
+}
+
+ul.category_menu li:hover > ul { /* 滑鼠移入次選單上層按鈕保持變色*/
+display: block;
+}
+
+ul.category_menu ul{
+//border: rgb(40, 40, 40) 1px solid;
+padding :0px 0px;
+position: relative;
+z-index: 99;
+left: 0px;
+top:100%;
+min-width: inherit;
+display: none;
+}
+ul.category_menu .cate_info{
+background-color: #969696;
+color: black;
+display: block;
+padding: 0px 30px ;
+text-decoration: none;
+line-height: 40px;
+}
+ul.category_menu ul li{
+//border-bottom: rgb(40, 40, 40) 1px solid;
+}
+
+ul.category_menu ul li:last-child{
+//	border-bottom: none;
+}
+
+ul.category_menu ul ul{
+	z-index: :999;
+	top: 10px;
+	left: 90%;
+}
